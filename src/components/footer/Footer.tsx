@@ -55,7 +55,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="container mx-auto mt-8 flex flex-col gap-3 border-t border-gray-200 pt-5 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
+      <div className="container mx-auto mb-3 mt-8 px-4 flex flex-col gap-3 border-t border-gray-200 pt-5 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 Dev Stack. All rights reserved.</p>
 
         <div className="flex gap-5">
