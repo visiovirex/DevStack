@@ -47,8 +47,6 @@ The application has a responsive design for different screen sizes, including a 
 
 ---
 
-# ⚛️ React Questions & Answers
-
 ## 1. What is JSX, and why is it used in React?
 
 JSX is a syntax that lets us write HTML-like code inside JavaScript or TypeScript. It makes React UI code easier to write and understand.
