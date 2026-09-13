@@ -2,9 +2,18 @@ import type { TechnologiesType } from "../type/technologiesType";
 
 interface TechnologiesCardProps {
   technology: TechnologiesType;
+  selectedTechnologies: TechnologiesType[];
+  handleAddToStack: (technology: TechnologiesType) => void;
 }
 
-function TechnologiesCard({ technology }: TechnologiesCardProps) {
+function TechnologiesCard({
+  technology,
+  selectedTechnologies,
+  handleAddToStack,
+}: TechnologiesCardProps) {
+  const isSelected = selectedTechnologies.some(
+    (item) => item.id === technology.id,
+  );
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
       <div className="flex items-start justify-between">
@@ -39,8 +48,16 @@ function TechnologiesCard({ technology }: TechnologiesCardProps) {
         <span>⭐ {technology.rating}</span>
       </div>
 
-      <button className="mt-3 w-full rounded-md bg-[#0B0F19] py-2 text-[10px] font-medium text-white transition hover:bg-gray-800 cursor-pointer">
-        Add to Stack
+      <button
+        onClick={() => handleAddToStack(technology)}
+        disabled={isSelected}
+        className={`mt-3 w-full rounded-md py-2 text-[10px] font-medium transition ${
+          isSelected
+            ? "cursor-not-allowed bg-gray-200 text-gray-500"
+            : "cursor-pointer bg-[#0B0F19] text-white hover:bg-gray-800"
+        }`}
+      >
+        {isSelected ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );

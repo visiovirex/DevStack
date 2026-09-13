@@ -2,7 +2,7 @@ import BannerImage from "../../assets/banner-stack.png";
 
 function Banner() {
   return (
-    <div className="container mx-auto px-4 py-8 md:py-10">
+    <div className="container mx-auto px-4 py-6 md:py-6">
       <div className="flex flex-col md:flex-row justify-between gap-10 items-center">
         <div className="w-full md:w-1/2">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
@@ -26,7 +26,7 @@ function Banner() {
           </div>
         </div>
         <div className="w-full justify-center md:w-1/2 flex">
-          <img src={BannerImage} alt="DevStack" />
+          <img className="w-120" src={BannerImage} alt="DevStack" />
         </div>
       </div>
     </div>
