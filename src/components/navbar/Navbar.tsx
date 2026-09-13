@@ -6,23 +6,26 @@ function Navbar() {
 
   const handleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log("Clicked");
   };
 
   return (
-    <div className="container mx-auto my-3 px-4">
+    <div className="sticky top-0 z-50 bg-white container mx-auto my-3 px-4">
       <div className="flex items-center justify-between">
         <button
           onClick={handleMenu}
-          className="order-1 text-2xl cursor-pointer md:hidden"
+          className="order-1 cursor-pointer text-2xl md:hidden"
         >
           ☰
         </button>
 
-        <img className="order-2 md:order-1" src={Logo} alt="DevStack" />
+        <img
+          className="order-2 w-24 sm:w-28 md:order-1 md:w-auto"
+          src={Logo}
+          alt="DevStack"
+        />
 
-        <div className="hidden md:block md:order-2">
-          <ul className="flex items-center gap-8">
+        <div className="hidden md:order-2 md:block">
+          <ul className="flex items-center gap-4 lg:gap-8">
             <li>
               <a className="text-[#D91B7E]" href="#">
                 Home
@@ -43,9 +46,12 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="hidden md:flex md:order-3 items-center gap-4">
-          <button className="cursor-pointer">Sign In</button>
-          <button className="btn rounded-2xl bg-[#D91B7E]">Sign Up</button>
+        <div className="order-3 flex items-center gap-2 md:order-3 md:gap-4">
+          <button className="cursor-pointer text-xs sm:text-sm">Sign In</button>
+
+          <button className="btn rounded-2xl bg-[#D91B7E] px-3 text-xs text-white sm:px-4 sm:text-sm">
+            Sign Up
+          </button>
         </div>
       </div>
 
@@ -70,11 +76,6 @@ function Navbar() {
               <a href="#">Contact</a>
             </li>
           </ul>
-
-          <div className="mt-5 flex items-center gap-4">
-            <button className="cursor-pointer">Sign In</button>
-            <button className="btn rounded-2xl bg-[#D91B7E]">Sign Up</button>
-          </div>
         </div>
       )}
     </div>

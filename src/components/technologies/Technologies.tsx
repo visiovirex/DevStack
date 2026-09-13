@@ -50,7 +50,7 @@ function Technologies({ technologiesPromise }: TechnologiesProps) {
       <div>
         <h1 className="text-3xl font-bold">
           Explore the{" "}
-          <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
+          <span className="brand-gradient-text">
             Technologies
           </span>
         </h1>
@@ -72,7 +72,7 @@ function Technologies({ technologiesPromise }: TechnologiesProps) {
           ))}
         </div>
 
-        <div className="rounded-xl border border-gray-200 p-5 shadow-sm">
+        <div className="h-fit rounded-xl border border-gray-200 p-5 shadow-sm">
           <h3 className="font-semibold">Your Stack</h3>
           <p className="mt-1 text-xs text-gray-400">
             {selectedTechnologies.length === 0
@@ -126,7 +126,7 @@ function Technologies({ technologiesPromise }: TechnologiesProps) {
 
               <button
                 onClick={handleRemoveAll}
-                className="mt-5 w-full rounded-lg border border-red-300 py-2 text-sm font-semibold text-red-500 transition hover:bg-red-50"
+                className="mt-5 w-full rounded-lg border border-red-300 py-2 text-sm font-semibold text-red-500 cursor-pointer transition hover:bg-red-50"
               >
                 Remove All
               </button>

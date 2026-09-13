@@ -23,7 +23,14 @@ function TechnologiesCard({
           alt={technology.name}
         />
 
-        <span className="rounded-full bg-gray-100 px-2 py-1 text-[10px] font-medium">
+        <span
+          className="rounded-full px-2 py-1 text-[10px] font-medium"
+          style={{
+            color: technology.color,
+            backgroundColor: `${technology.color}15`,
+            border: `1px solid ${technology.color}30`,
+          }}
+        >
           {technology.badge}
         </span>
       </div>
@@ -50,11 +57,10 @@ function TechnologiesCard({
 
       <button
         onClick={() => handleAddToStack(technology)}
-        disabled={isSelected}
-        className={`mt-3 w-full rounded-md py-2 text-[10px] font-medium transition ${
+        className={`mt-3 w-full rounded-md py-2 text-[10px] font-medium text-white transition ${
           isSelected
-            ? "cursor-not-allowed bg-gray-200 text-gray-500"
-            : "cursor-pointer bg-[#0B0F19] text-white hover:bg-gray-800"
+            ? "cursor-pointer bg-green-500 hover:bg-green-600"
+            : "cursor-pointer bg-[#0B0F19] hover:bg-gray-800"
         }`}
       >
         {isSelected ? "✓ Added to Stack" : "Add to Stack"}
